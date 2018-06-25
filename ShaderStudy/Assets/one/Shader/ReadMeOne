@@ -1,0 +1,17 @@
+
+结构：
+Shader "路径/Shader名字" {
+    Properties {
+        //属性
+		 _Color ("Main Color", Color) = (1,0.5,0.5,1)
+		 属性名   面板上名字   类型      初始值
+    }
+    SubShader {
+        Pass {
+            Material {
+                Diffuse [_Color]
+            }
+            Lighting On
+        }
+    }
+}
