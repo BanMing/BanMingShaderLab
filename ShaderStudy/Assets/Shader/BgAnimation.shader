@@ -60,6 +60,7 @@
             {
                 v2f o; 
                 o.vertex = UnityObjectToClipPos(v.vertex); 
+                // frac 方法是返回参数的小数部分
                 o.uv.xy = TRANSFORM_TEX(v.uv, _MainTex) +frac(float2(_ScrollX, 0.0) * _Time.y); 
                 o.uv.zw= TRANSFORM_TEX(v.uv, _DetailTex) + frac(float2(_Scroll2X, 0.0) * _Time.y); 
                 // UNITY_TRANSFER_FOG(o, o.vertex); 
