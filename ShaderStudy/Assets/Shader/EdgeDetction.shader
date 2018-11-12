@@ -8,14 +8,18 @@ Shader "BanMing/EdgeDetction"
     }
     SubShader {
         Tags {"RenderType" = "Opaque"}
+        LOD 100
+
         Pass {
             
             CGPROGRAM
             
             #include "UnityCG.cginc"
-                #pragma vertex vert
-                #pragma fragment frag
-                sampler2D _MainTex; 
+                
+            #pragma vertex vert
+            #pragma fragment frag
+
+            sampler2D _MainTex; 
             float4 _MainTex_ST; 
             //一个像素的大小
             half4 _MainTex_TexelSize; 
@@ -81,7 +85,7 @@ Shader "BanMing/EdgeDetction"
                 
                 fixed4 withEdgeColor = lerp(_EdgeColor, tex2D(_MainTex, i.uv[4]), edge); 
                 fixed4 onlyEdgeColor = lerp(_EdgeColor, _BackgroundColor, edge); 
-                return lerp(withEdgeColor, onlyEdgeColor, _EdgeOnly); 
+                return  lerp(withEdgeColor, onlyEdgeColor, _EdgeOnly); 
             }
             
             

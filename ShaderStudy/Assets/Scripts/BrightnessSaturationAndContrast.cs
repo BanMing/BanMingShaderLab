@@ -38,6 +38,7 @@ public class BrightnessSaturationAndContrast : PostEffectBase
             Graphics.Blit(src,dest,material);
         }else
         {
+            // Debug.Log("@@@@@@@@2");
             Graphics.Blit(src,dest);
         }
     }
