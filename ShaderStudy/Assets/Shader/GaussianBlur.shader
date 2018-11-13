@@ -82,10 +82,10 @@
 				half2 uv = v.texcoord; 
 				
 				o.uv[0] = uv; 
-				o.uv[1] = uv + float2(0.0, _MainTex_TexelSize.x * 1.0) * _BlurSize; 
-				o.uv[3] = uv - float2(0.0, _MainTex_TexelSize.x * 1.0) * _BlurSize; 
-				o.uv[2] = uv + float2(0.0, _MainTex_TexelSize.x * 2.0) * _BlurSize; 
-				o.uv[4] = uv - float2(0.0, _MainTex_TexelSize.x * 2.0) * _BlurSize; 
+				o.uv[1] = uv + float2( _MainTex_TexelSize.x * 1.0,0.0) * _BlurSize; 
+				o.uv[3] = uv - float2( _MainTex_TexelSize.x * 1.0,0.0) * _BlurSize; 
+				o.uv[2] = uv + float2( _MainTex_TexelSize.x * 2.0,0.0) * _BlurSize; 
+				o.uv[4] = uv - float2( _MainTex_TexelSize.x * 2.0,0.0) * _BlurSize; 
 				
 				return o; 
 			}
