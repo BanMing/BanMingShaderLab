@@ -49,11 +49,11 @@ public class MotionBlur : PostEffectBase
                 accumulationTexture.hideFlags=HideFlags.HideAndDontSave;
                 Graphics.Blit(src,accumulationTexture);
             }
-
+            //恢复操作 发生在渲染到纹理而该纹理又没有被提前清空或销毁的情况
             accumulationTexture.MarkRestoreExpected();
 
             material.SetFloat("_BlurAmount",1.0f-blurAmount);
-
+            //把屏幕中的效果存到缓存图中去
             Graphics.Blit(src,accumulationTexture,material);
             Graphics.Blit(accumulationTexture,dest);
         }
