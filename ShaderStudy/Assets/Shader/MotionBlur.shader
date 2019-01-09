@@ -29,8 +29,8 @@
 		}
 		ENDCG
 		
-		ZTest Always Cull Off ZWrite Off 
-
+		ZTest Always Cull Off ZWrite Off
+		
 		Pass
 		{
 			Blend SrcAlpha OneMinusSrcAlpha
@@ -46,7 +46,7 @@
 		}
 		Pass
 		{
-
+			
 			Blend One Zero
 			ColorMask A
 			CGPROGRAM
