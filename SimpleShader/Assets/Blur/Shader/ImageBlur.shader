@@ -7,6 +7,7 @@
     }
     SubShader
     {
+        //因为我们需要记录当前的屏幕所以是需要透明通道
         Tags {"Queue" = "Transparent"}
         
         CGINCLUDE
@@ -14,6 +15,7 @@
         sampler2D _GrabTexture; 
         half4 _GrabTexture_TexelSize; 
         float _BlurSize; 
+        float4 _Color; 
         
         struct v2f
         {
@@ -32,7 +34,7 @@
                 sum += tex2Dproj(_GrabTexture, i.uv[index]) * weight[index]; 
                 sum += tex2Dproj(_GrabTexture, i.uv[2 * index]) * weight[index]; 
             }
-            return sum; 
+            return sum * _Color; 
         }
         ENDCG
         
