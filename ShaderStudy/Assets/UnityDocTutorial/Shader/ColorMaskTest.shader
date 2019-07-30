@@ -6,7 +6,7 @@
     }
     SubShader
     {
-        Tags { "RenderType" = "Transparent" }
+        Tags { "RenderType" = "Transparent" "PreviewType"= ""} 
         ColorMask 0
         Cull Back
         Pass

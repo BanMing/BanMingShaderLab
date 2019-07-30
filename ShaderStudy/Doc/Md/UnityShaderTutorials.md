@@ -27,3 +27,14 @@
 
 https://blog.csdn.net/lyh916/article/details/45317571
 https://docs.unity3d.com/Manual/SL-CullAndDepth.html
+
+
+>**SubShader的Tag**
+
+**RenderType**
+可以使用Camera.RenderWithShader或者Camera.SetReplacementShader方法来替换相机照的的物体的shader。
+
+- 使用Camera.SetReplacementShader("ShaderA","")后，把相机照的所有shader替换成ShaderA渲染。
+- 使用Camera.SetReplacementShader("ShaderA","RenderType"),把相机照到所有的shader中RenderType与ShaderA中的RenderType一样的Shader替换成ShaderA渲染，其余的不做渲染。
+
+当然这个方法也可以使用其他Tag来做替换，在unity内置会有使用RenderType来替换的优化方案。
