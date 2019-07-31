@@ -19,7 +19,7 @@
         "**/*.wav":true,
         "**/*.gif":true,
         "**/*.ico":true,
-        "**/*.jpg":true,
+        // "**/*.jpg":true,
         "**/*.jpeg":true,
         // "**/*.png":true,
         "**/*.psd":true,

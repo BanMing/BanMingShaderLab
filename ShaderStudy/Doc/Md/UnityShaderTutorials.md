@@ -44,7 +44,12 @@ http://www.luzexi.com/2018/08/08/Unity3D%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E4%
 
 >**Blend**
 
-常见的混合类型：
 
-    //正常{Normal}，即透明度混合
-    Blend SrcAlpha OneMinusSrcAlpha
+>**Stencil**
+
+![stencil流程图](../Images/stencil.jpg)
+**参考文章：**
+https://docs.unity3d.com/Manual/SL-Stencil.html
+https://gameinstitute.qq.com/community/detail/115198
+https://www.jianshu.com/p/0320ceffbfa8
+https://blog.csdn.net/liu_if_else/article/details/86316361
