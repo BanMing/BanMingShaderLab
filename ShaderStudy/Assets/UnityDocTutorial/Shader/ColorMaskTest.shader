@@ -6,8 +6,9 @@
     }
     SubShader
     {
-        Tags { "RenderType" = "Transparent" "PreviewType"= ""} 
+        Tags { "RenderType" = "Transparent" }
         ColorMask 0
+        // BlendOp 
         Cull Back
         Pass
         {

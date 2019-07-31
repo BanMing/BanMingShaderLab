@@ -38,3 +38,13 @@ https://docs.unity3d.com/Manual/SL-CullAndDepth.html
 - 使用Camera.SetReplacementShader("ShaderA","RenderType"),把相机照到所有的shader中RenderType与ShaderA中的RenderType一样的Shader替换成ShaderA渲染，其余的不做渲染。
 
 当然这个方法也可以使用其他Tag来做替换，在unity内置会有使用RenderType来替换的优化方案。
+
+**参考文章：**
+http://www.luzexi.com/2018/08/08/Unity3D%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E4%B9%8B%E8%BF%9B%E9%98%B6%E4%B8%BB%E7%A8%8B-Shader4.html
+
+>**Blend**
+
+常见的混合类型：
+
+    //正常{Normal}，即透明度混合
+    Blend SrcAlpha OneMinusSrcAlpha
