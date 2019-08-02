@@ -24,6 +24,7 @@ Shader "Tutorial/StencilLookTest"
         
         Pass
         {
+            Name "stencil_mask"
             CGPROGRAM
             
             #pragma vertex vert
